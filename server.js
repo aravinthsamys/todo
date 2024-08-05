@@ -9,10 +9,10 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
-
+const MONGO_URI ='mongodb+srv://captcha486:indian2@cluster0.rnpikpd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 // MongoDB Atlas connection string
-const mongoURI = process.env.MONGO_URI || `mongodb+srv://captcha486:indian2@cluster0.rnpikpd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`; 
+const mongoURI = process.env.MONGO_URI || 'mongodb+srv://captcha486:indian2@cluster0.rnpikpd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; 
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
